@@ -9,7 +9,7 @@ function playGame() {
 }
 
 const round = () => {
-  const user = getUser();
+  const user = getUser().toLowerCase().trim();
   const cpu = getCpu();
   console.log(`You picked: ${user}`);
   console.log(`Cpu picked: ${cpu}`);
@@ -20,12 +20,10 @@ const round = () => {
 }
 
 function getUser() {
-  let input = prompt('Rock, Paper or Scissors.');
-  while (input == null) {
-    input = prompt('Type Rock, Paper or Scissors.');
-  }
+  let input = prompt('Rock, Paper or Scissors.').toLowerCase().trim();
   while (input == '') {
-    input = prompt('Type Rock, Paper or Scissors.')
+    input = prompt('Type Rock, Paper or Scissors.');
+    
   }
   if (input === 'rock' || input === 'scissors' || input === 'paper') {
     return input
