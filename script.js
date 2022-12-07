@@ -22,12 +22,11 @@ const round = () => {
 function getUser() {
   let input = prompt('Rock, Paper or Scissors.');
   while (input == null) {
-    input = prompt('Type Rock, Paper or Scissors.')
+    input = prompt('Type Rock, Paper or Scissors.');
   }
   while (input == '') {
     input = prompt('Type Rock, Paper or Scissors.')
-  } 
-
+  }
   if (input === 'rock' || input === 'scissors' || input === 'paper') {
     return input
     } else {
@@ -46,8 +45,6 @@ const getCpu = () => {
       return 'scissors';
   }
 }
-
-
 
 const winner = (user, cpu) => {
   if (user === cpu) {
